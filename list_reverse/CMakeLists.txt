@@ -1,0 +1,7 @@
+add_executable(list_reverse list_reverse.h list_reverse_main.cpp)
+target_link_libraries(list_reverse PRIVATE utils_lib)
+
+add_executable(list_reverse_tests list_reverse.h list_reverse_tests.cpp)
+target_link_libraries(list_reverse_tests PRIVATE GTest::gtest_main)
+
+gtest_discover_tests(list_reverse_tests)
